@@ -34,3 +34,15 @@ popd
 pushd pip-1.3.1
 $PY25BIN setup.py install
 popd
+
+pushd mock-1.0.1
+$PY25BIN setup.py install
+popd
+
+$HOME/.virtualenvs/py25/bin/pip install --insecure nose
+$HOME/.virtualenvs/py25/bin/pip install --insecure simplejson
+$HOME/.virtualenvs/py25/bin/pip install --insecure argparse
+$HOME/.virtualenvs/py25/bin/pip install --insecure py==1.4.17
+$HOME/.virtualenvs/py25/bin/pip install --insecure virtualenv==1.11.2
+$HOME/.virtualenvs/py25/bin/pip install --insecure tox==1.6.1 --no-deps
+
