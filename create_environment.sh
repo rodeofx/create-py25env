@@ -21,7 +21,7 @@ popd
 
 VIRTUALENV=$PYDIR/virtualenv
 
-$VIRTUALENV -p $PYTHON $HOME/.virtualenvs/py25
+$VIRTUALENV -p $PYTHON $CURRENT_DIR/env # $HOME/.virtualenvs/py25
 
 PY25BIN=$HOME/.virtualenvs/py25/bin/python 
 
