@@ -4,12 +4,10 @@ curl -kL https://raw.githubusercontent.com/saghul/pythonz/master/pythonz-install
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc 
 pythonz install 2.5.6
  
-wget https://pypi.python.org/packages/a2/52/7edcd94f0afb721a2d559a5b9aae8af4f8f2c79bc63fdbe8a8a6c9b23bbe/mock-1.0.1.tar.gz
 wget https://pypi.python.org/packages/source/p/pip/pip-1.3.1.tar.gz
 wget https://pypi.python.org/packages/source/s/setuptools/setuptools-1.4.2.tar.gz
 wget https://pypi.python.org/packages/a5/f9/0c604ce96292da59301c062689b1380594382c70f27b279522f5d7add9c2/virtualenv-1.9.1.tar.gz
 
-tar xfz mock-1.0.1.tar.gz
 tar xfz pip-1.3.1.tar.gz
 tar xfz setuptools-1.4.2.tar.gz
 tar xfz virtualenv-1.9.1.tar.gz
@@ -35,14 +33,4 @@ pushd pip-1.3.1
 $PY25BIN setup.py install
 popd
 
-pushd mock-1.0.1
-$PY25BIN setup.py install
-popd
-
-$HOME/.virtualenvs/py25/bin/pip install --insecure nose
-$HOME/.virtualenvs/py25/bin/pip install --insecure simplejson
-$HOME/.virtualenvs/py25/bin/pip install --insecure argparse
-$HOME/.virtualenvs/py25/bin/pip install --insecure py==1.4.17
-$HOME/.virtualenvs/py25/bin/pip install --insecure virtualenv==1.11.2
-$HOME/.virtualenvs/py25/bin/pip install --insecure tox==1.6.1 --no-deps
-
+$HOME/.virtualenvs/py25/bin/pip install --insecure -r requirements.txt
