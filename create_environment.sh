@@ -24,7 +24,7 @@ popd
 VIRTUALENV=$PYDIR/virtualenv
 ENV=$CURRENT_DIR/env
 
-$VIRTUALENV -p $PYTHON $ENV
+$VIRTUALENV --distribute -p $PYTHON $ENV
 
 PY25BIN=$ENV/bin/python
 
